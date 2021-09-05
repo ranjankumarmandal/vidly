@@ -23,12 +23,6 @@ class Movies extends Component {
               <td>{movie.dailyRentalRate}</td>
             </tr>
           ))}
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
         </tbody>
       </table>
     );
