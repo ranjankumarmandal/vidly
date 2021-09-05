@@ -17,6 +17,12 @@ class Movies extends Component {
     return (
       <React.Fragment>
         <p>Showing {this.state.movies.length} movies in the database.</p>
+        <p>
+          This is a demo project which covers the concept of React Components.{" "}
+          <a href="https://raw.githubusercontent.com/ranjankumarmandal/vidly/master/concepts_covered.png">
+            Topics Covered
+          </a>
+        </p>
         <table className="table">
           <thead>
             <tr>
