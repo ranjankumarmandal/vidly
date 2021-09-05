@@ -18,7 +18,7 @@ class Movies extends Component {
           {this.state.movies.map((movie) => (
             <tr>
               <td>{movie.title}</td>
-              <td>{movie.genre}</td>
+              <td>{movie.genre.name}</td>
               <td>{movie.numberInStock}</td>
               <td>{movie.dailyRentalRate}</td>
             </tr>
