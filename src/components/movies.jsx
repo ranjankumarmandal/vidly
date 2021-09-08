@@ -28,7 +28,7 @@ class Movies extends Component {
         <p>Showing {this.state.movies.length} movies in the database.</p>
         <p>
           This is a demo project which covers the concept of React Components.{" "}
-          <a href="https://raw.githubusercontent.com/ranjankumarmandal/vidly/master/concepts_covered.png">
+          <a href="https://raw.githubusercontent.com/ranjankumarmandal/vidly/master/concepts_covered_react_Compopnents.png">
             Topics Covered
           </a>
         </p>
