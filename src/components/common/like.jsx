@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 const Like = (props) => {
   let classes = "fa fa-heart";
-  if (!props.onLike) classes += "-o";
+  if (!props.liked) classes += "-o";
   return (
     <i
       onClick={props.onClick}
