@@ -3,7 +3,7 @@ import { getMovies } from "../services/fakeMovieService";
 import Like from "./common/like";
 
 class Movies extends Component {
-  state = { movies: getMovies() };
+  state = { movies: getMovies() }; // react state
 
   handleLike = (movie) => {
     const movies = this.state.movies;
