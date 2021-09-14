@@ -12,6 +12,7 @@ class Movies extends Component {
     genres: [],
     pageSize: 4,
     currentPage: 1,
+    currentGenre: 1,
   }; // react state
 
   componentDidMount() {
@@ -32,14 +33,11 @@ class Movies extends Component {
   };
 
   handlePageChange = (page) => {
-    let currentPage = this.state.currentPage;
-    currentPage = page;
-    this.setState({ currentPage });
-    console.log(currentPage);
+    this.setState({ currentPage: page });
   };
 
   handleGenereSelect = (genre) => {
-    console.log(genre);
+    this.setState({ currentGenre: genre });
   };
 
   render() {
@@ -59,6 +57,7 @@ class Movies extends Component {
           <ListGroup
             items={this.state.genres}
             onClick={this.handleGenereSelect}
+            currentGenre={this.state.currentGenre}
           />
         </div>
 
