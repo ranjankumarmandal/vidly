@@ -7,7 +7,7 @@ const ListGroup = (props) => {
     <ul className="list-group">
       {items.map((item) => (
         <li
-          key={item._id}
+          key={item._id ? item._id : "all"}
           className={
             item === currentGenre ? "list-group-item active" : "list-group-item"
           }
