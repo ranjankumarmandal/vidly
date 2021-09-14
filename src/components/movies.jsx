@@ -16,7 +16,8 @@ class Movies extends Component {
   }; // react state
 
   componentDidMount() {
-    this.setState({ movies: getMovies(), genres: getGenres() });
+    const genres = [{ name: "All Genres", _id: "all" }, ...getGenres()];
+    this.setState({ movies: getMovies(), genres: genres });
   }
 
   handleLike = (movie) => {
@@ -41,12 +42,18 @@ class Movies extends Component {
   };
 
   render() {
-    if (this.state.movies.length === 0) {
+    if (this.state.movies.length === 0)
       return <p>There are no movies in the database.</p>;
-    }
+
+    const filtered =
+      this.state.currentGenre && this.state.currentGenre._id
+        ? this.state.movies.filter(
+            (m) => m.genre._id === this.state.currentGenre._id
+          )
+        : this.state.movies;
 
     const movies = paginate(
-      this.state.movies,
+      filtered,
       this.state.currentPage,
       this.state.pageSize
     );
@@ -62,7 +69,7 @@ class Movies extends Component {
         </div>
 
         <div className="col">
-          <p>Showing {this.state.movies.length} movies in the database.</p>
+          <p>Showing {filtered.length} movies in the database.</p>
           <p>
             This is a demo project which covers the concept of React Components.{" "}
             <a href="https://raw.githubusercontent.com/ranjankumarmandal/vidly/master/concepts_covered_react_Compopnents.png">
@@ -106,7 +113,7 @@ class Movies extends Component {
             </tbody>
           </table>
           <Pagination
-            itemsCount={this.state.movies.length}
+            itemsCount={filtered.length}
             pageSize={this.state.pageSize}
             onClick={this.handlePageChange}
             currentPage={this.state.currentPage}
