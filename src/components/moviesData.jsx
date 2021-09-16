@@ -17,25 +17,25 @@ const MoviesData = (props) => {
         <thead>
           <tr>
             <th className="clickable" onClick={() => props.onSort("title")}>
-              Title <i class="fa fa-fw fa-sort"></i>
+              Title <i className="fa fa-fw fa-sort"></i>
             </th>
             <th
               className="clickable"
               onClick={() => props.onSort("genre.name")}
             >
-              Genre <i class="fa fa-fw fa-sort"></i>
+              Genre <i className="fa fa-fw fa-sort"></i>
             </th>
             <th
               className="clickable"
               onClick={() => props.onSort("numberInStock")}
             >
-              Stock <i class="fa fa-fw fa-sort"></i>
+              Stock <i className="fa fa-fw fa-sort"></i>
             </th>
             <th
               className="clickable"
               onClick={() => props.onSort("dailyRentalRate")}
             >
-              Rate <i class="fa fa-fw fa-sort"></i>
+              Rate <i className="fa fa-fw fa-sort"></i>
             </th>
             <th></th>
             <th></th>
