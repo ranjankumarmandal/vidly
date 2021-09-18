@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Hello visitor, this is my react application, a counter-application (Covering concets of 'Essence of React Components'). Feel free to use this. And kindly let me know if you have some scalable and more efficient approach to design the same. Happy Coding !! :)
+Hello visitor, this is my react application, a vidly-application (Covering concets of 'Essence of React Components, Pagination, Filtering, Sorting, Routing, Forms, Calling Backends, Authentication'). Feel free to use this. And kindly let me know if you have some scalable and more efficient approach to design the same. Happy Coding !! :)
 
 ## Step to create React application –
 
