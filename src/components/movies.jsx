@@ -18,6 +18,7 @@ class Movies extends Component {
   }; // react state
 
   componentDidMount() {
+    // react's 'mount' life cycle hook
     const genres = [{ name: "All Genres" }, ...getGenres()];
     this.setState({ movies: getMovies(), genres: genres });
   }
